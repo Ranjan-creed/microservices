@@ -1,0 +1,10 @@
+com\example\message\messageservice\WebSocketConfiguration.class
+com\example\message\messageservice\controller\MessageController.class
+com\example\message\messageservice\data\History.class
+com\example\message\messageservice\repository\HistoryRepo.class
+com\example\message\messageservice\MessageServiceApplication.class
+com\example\message\messageservice\WebConfig.class
+com\example\message\messageservice\data\History$HistoryCategory.class
+com\example\message\messageservice\service\HistoryService.class
+com\example\message\messageservice\controller\HistoryController.class
+com\example\message\messageservice\service\impl\HistoryServiceImpl.class
