@@ -1,0 +1,10 @@
+com\example\user\service\UserService.class
+com\example\user\UserServiceApplication.class
+com\example\user\util\ChecksumUtil.class
+com\example\user\controller\UserController.class
+com\example\user\data\User.class
+com\example\user\util\UserUtil.class
+com\example\user\repository\UserRepo.class
+com\example\user\service\impl\UserServiceImpl.class
+com\example\user\WebConfig.class
+com\example\user\data\User$ChecksumType.class
