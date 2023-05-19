@@ -1,0 +1,41 @@
+server:
+  servlet:
+    context-path: /v1
+  port: 5050
+
+spring:
+  application:
+    name: GatewayServer
+  cloud:
+    gateway:
+      routes:
+        - id: user
+          uri: lb://UserServiceApplication
+          predicates:
+            - Path=/v1/user/**
+          filters:
+            - StripPrefix=1
+        - id: message
+          uri: lb://messageServiceApplication
+          predicates:
+            - Path=/v1/message/**
+          filters:
+            - StripPrefix=1
+        - id: document
+          uri: lb://documentServiceApplication
+          predicates:
+            - Path=/v1/document/**
+          filters:
+            - StripPrefix=1
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://${EUREKA_APP_HOST:localhost}:${EUREKA_APP_PORT:6060}/eureka
+
